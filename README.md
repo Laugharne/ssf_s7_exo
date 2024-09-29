@@ -324,7 +324,7 @@ console.log("Connected to: " + authorizationResult.accounts[0].address)
 
 --------
 
-Try to resolve problem "Error: Can't resolve 'crypto'"
+To resolve problem "Error: Can't resolve 'crypto'"
 
 - [javascript - Module not found: Error: Can't resolve 'crypto' - Stack Overflow](https://stackoverflow.com/questions/54162297/module-not-found-error-cant-resolve-crypto)
 
