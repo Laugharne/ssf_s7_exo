@@ -33,3 +33,14 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+notes.md
+notes/
+
+backup/
+.zipignore
+history.log
+versions.log
+notes.txt
+solana_cfg.log
+test-ledger/
