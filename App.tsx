@@ -7,13 +7,11 @@ import {
   CameraView,
   CameraType,
   useCameraPermissions,
-  Camera
 } from 'expo-camera';
 
 import { useRef, useState, useContext, createContext } from 'react';
 import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-//import * as FileSystem from 'expo-file-system';
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import {firebase, firebaseConfig} from './firebase'
 
@@ -36,18 +34,8 @@ import {
   Web3MobileWallet,
 } from "@solana-mobile/mobile-wallet-adapter-protocol-web3js";
 
-import { WalletAdapter, walletAdapterIdentity } from "@metaplex-foundation/js";
-import { generateSigner, createUmi, percentAmount, Umi } from "@metaplex-foundation/umi";
-
-//import { createUmiDefault } from '@metaplex-foundation/umi-bundle-defaults';
-// type UmiContext = {
-//   umi: Umi | null;
-// };
-
-// const DEFAULT_CONTEXT: UmiContext = {
-//   umi: null,
-// };
-// export const UmiContext = createContext<UmiContext>(DEFAULT_CONTEXT);
+// import { WalletAdapter, walletAdapterIdentity } from "@metaplex-foundation/js";
+// import { generateSigner, createUmi, percentAmount, Umi } from "@metaplex-foundation/umi";
 
 
 export const APP_IDENTITY = {
@@ -67,18 +55,11 @@ import {
   NftWithToken,
 } from "@metaplex-foundation/js";
 
-///
-
-///
-
 
 import {
-  //sendTransaction,
   clusterApiUrl,
-  //Connection,
   VersionedTransaction,
   SystemProgram,
-  //confirmTransaction,
 } from "@solana/web3.js";
 
 
@@ -218,28 +199,8 @@ export default function App() {
           });
 
         console.log('JSON Metadata uploaded to Firebase: ', metaDataUrl);
-        // const [walletAdapter, setWalletAdapter] = useState<WalletAdapter | null>(
-        //   null
-        // );
 
-        //-const pk = new PublicKey(authorizationResult.accounts[0].address);
-
-        // const {
-        //   signMessage,
-        //   signTransactionForUmi,
-        //   signAllTransactionsForUmi
-        // } = useMobileWallet();
-
-        // setWalletAdapter({
-        //   publicKey          : pk,
-        //   signMessage        : signMessage,
-        //   signTransaction    : signTransactionForUmi,
-        //   signAllTransactions: signAllTransactionsForUmi,
-        // });
-        // //const umi = useContext(UmiContext).umi;
-        // //const [umi, setUmi] = useState(createUmi());
-        //const umi = createUmi()
-        //const umi = createUmiDefault(clusterApiUrl('devnet'));
+        // const umi = createUmi()
         //   .use(walletAdapterIdentity(walletAdapter))
         //   .use(mplTokenMetadata());
 

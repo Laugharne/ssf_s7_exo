@@ -27,10 +27,64 @@ As it is, the application runs in emulation.
 
 ## Installation
 
-https://docs.expo.dev/versions/latest/sdk/camera/
-npx expo install expo-camera
+### Andoid Studio
 
-Configuration in app.json/app.config.js
+Before all, install **Android Studio**
+
+[Install Android Studio  |  Android Developers](https://developer.android.com/studio/install?hl=en#linux)
+
+And setup an emulator
+
+
+### App installation
+
+**Clone the repo:**
+
+```bash
+git clone https://github.com/Laugharne/ssf_s7_exo.git
+```
+
+**Install dependencies:**
+
+```bash
+npm install
+```
+
+**Run app in Android emulator:**
+
+```bash
+npm run start
+```
+
+```
+› Metro waiting on exp+test02://expo-development-client/?url=http%3A%2F%2F192.168.1.2%3A8081
+› Scan the QR code above to open the project in a development build. Learn more: https://expo.fyi/start
+
+› Using development build
+› Press s │ switch to Expo Go
+
+› Press a │ open Android
+› Press w │ open web
+
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+› Press o │ open project code in your editor
+
+› Press ? │ show all commands
+
+Logs for your project will appear below. Press Ctrl+C to exit.
+```
+Choose 'open android' by pressing 'a'
+
+```
+Logs for your project will appear below. Press Ctrl+C to exit.
+› Opening on Android...
+› Opening emulator Pixel_6_API_35
+› Opening exp+test02://expo-development-client/?url=http%3A%2F%2F192.168.1.2%3A8081 on Pixel_6_API_35
+› Press ? │ show all commands
+Android Bundled 11301ms node_modules/expo/AppEntry.js (770 modules)
+```
 
 --------
 
@@ -146,6 +200,8 @@ if (cameraRef.current) {
 
 ![](img/2024-09-29-10-55-24.png)
 
+**Log:**
+
 ```bash
  LOG  initializeApp(firebaseConfig)
  LOG  Image captured:  file:///data/user/0/com.laugharne.test02/cache/Camera/436482dd-bec2-4940-8ff2-a4eb7876585b.jpg
@@ -172,6 +228,11 @@ const downloadURL = await getDownloadURL(storageRef);
 console.log('Image uploaded to Firebase: ', downloadURL);
 
 ```
+
+![](img/2024-09-29-13-24-00.png)
+
+**Log:**
+
 ```bash
  LOG  initializeApp(firebaseConfig)
  LOG  Image captured:  file:///data/user/0/com.laugharne.test02/cache/Camera/436482dd-bec2-4940-8ff2-a4eb7876585b.jpg
@@ -201,6 +262,7 @@ async function getCurrentLocation() {
   return location;
 }
 ```
+**Log:**
 
 ```bash
  LOG  Current location: {"coords": {"accuracy": 600, "altitude": 0, "altitudeAccuracy": 0, "heading": 0, "latitude": 37.4220936, "longitude": -122.083922, "speed": 0}, "mocked": false, "timestamp": 1727599401320}
@@ -235,6 +297,7 @@ const authorizationResult = await transact(async (wallet: Web3MobileWallet) => {
 
 console.log("Connected to: " + authorizationResult.accounts[0].address)
 ```
+**Log:**
 
 ```bash
  LOG  Connected to: eZRUH6GAqiJvp14JbXCHjh4UjU6FC+OkrZBH0e02ceQ=
@@ -316,3 +379,7 @@ Try to resolve problem "Error: Can't resolve 'crypto'"
 - [tutorial-apps/MobileNFTMinter at main · solana-mobile/tutorial-apps · GitHub](https://github.com/solana-mobile/tutorial-apps/tree/main/MobileNFTMinter)
 - [How to mint NFTs using Solana’s mobile wallet adapter](https://monadical.com/posts/minting-nft-solana-mobile.html#)
 - [How to Create a NFT On Solana | Token Metadata Guides](https://developers.metaplex.com/token-metadata/guides/javascript/create-an-nft)
+
+**Android Studio:**
+- [Install Android Studio | Android Developers](https://developer.android.com/studio/install?hl=en#linux)
+
